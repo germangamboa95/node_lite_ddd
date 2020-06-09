@@ -7,9 +7,16 @@ import {
   UpdateDateColumn,
 } from 'typeorm';
 import { Note } from '../../Notes/models/Note';
-
+export interface UserInterface {
+  id?: number;
+  firstName: string;
+  lastName: string;
+  age: number;
+  created_at: Date;
+  updated_at: Date;
+}
 @Entity()
-export class User {
+export class User implements UserInterface {
   @PrimaryGeneratedColumn()
   id: number;
 

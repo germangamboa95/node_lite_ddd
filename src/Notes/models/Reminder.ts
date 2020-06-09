@@ -23,7 +23,7 @@ export class Reminder {
   remind_at: Date;
 
   @Column()
-  status: ReminderStatus;
+  status: ReminderStatus = ReminderStatus.WAITNG;
 
   @ManyToOne(
     type => Note,

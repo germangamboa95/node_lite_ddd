@@ -9,8 +9,14 @@ import {
 import { User } from '../../Users/models/User';
 import { Reminder } from './Reminder';
 
+export interface NoteInterface {
+  id?: number;
+  title: string;
+  body: string;
+}
+
 @Entity()
-export class Note {
+export class Note implements NoteInterface {
   @PrimaryGeneratedColumn()
   id: number;
 
